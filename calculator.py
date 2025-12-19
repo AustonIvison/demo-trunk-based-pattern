@@ -35,6 +35,16 @@ class Calculator:
         else:
             raise NotImplementedError("Feature not enabled")
 
+    def log(self, message):
+        # Feature flagged
+        import json
+        with open('flags.json', 'r') as f:
+            flags = json.load(f)
+        if flags.get('new_logging_feature', False):
+            print(f"LOG: {message}")
+        else:
+            pass # Logging disabled
+
 if __name__ == "__main__":
     calc = Calculator()
     print("1 + 2 =", calc.add(1, 2))
