@@ -3,5 +3,5 @@
   "new_power_feature": true,
   "new_modulus_feature": true,
   "new_sqrt_feature": true,
-  "new_logging_feature": false
+  "new_logging_feature": true
 }
