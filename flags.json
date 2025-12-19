@@ -1,5 +1,6 @@
 {
   "new_multiplication_feature": false,
   "new_power_feature": true,
-  "new_modulus_feature": true
+  "new_modulus_feature": true,
+  "new_sqrt_feature": false
 }

@@ -25,6 +25,16 @@ class Calculator:
         else:
             raise NotImplementedError("Feature not enabled")
 
+    def square_root(self, a):
+        # Feature flagged
+        import json
+        with open('flags.json', 'r') as f:
+            flags = json.load(f)
+        if flags.get('new_sqrt_feature', False):
+            return a ** 0.5
+        else:
+            raise NotImplementedError("Feature not enabled")
+
 if __name__ == "__main__":
     calc = Calculator()
     print("1 + 2 =", calc.add(1, 2))
